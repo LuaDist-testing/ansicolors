@@ -1,5 +1,7 @@
 h1. ansicolors.lua
 
+!https://travis-ci.org/kikito/ansicolors.lua.png?branch=master!:https://travis-ci.org/kikito/ansicolors.lua
+
 ansicolors is a simple Lua function for printing to the console in color.
 
 
@@ -16,9 +18,11 @@ h2. Usage
 <pre>
   local colors = require 'ansicolors'
   print(colors('%{red}hello'))
-  print(colors('%{redbg}hello{%reset}'))
+  print(colors('%{redbg}hello%{reset}'))
   print(colors('%{bright red underlined}hello'))
 </pre>
+
+The @colors@ function makes sure that color attributes are reset at each end of the generated string. If you want to generate complex strings piece-by-piece, use @colors.noReset@, which works exactly the same, but without adding the reset codes at each end of the string.
 
 h2. Testing
 
