@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "ansicolors"
-version = "1.0.2-1"
+version = "1.0.2-3"
 -- LuaDist source
 source = {
-  tag = "1.0.2-1",
+  tag = "1.0.2-3",
   url = "git://github.com/LuaDist-testing/ansicolors.git"
 }
 -- Original source
@@ -27,5 +27,6 @@ build = {
   type = "builtin",
   modules = {
     ["ansicolors"] = "ansicolors.lua"
-  }
+  },
+  copy_directories = {}
 }
